@@ -1,0 +1,6 @@
+[program:{ Your Program Name }] 
+command:php /var/www/html/StockAdmin/artisan { your command }
+autostart=true  #If true, this program will start automatically when supervisord is started.
+autorestart=true    
+stderr_logfile=/etc/supervisor/logs/{ Your Program Name }.err.log #Where to see your response Log 
+stdout_logfile=/etc/supervisor/logs/{ Your Program Name }.out.log #Where to see your response Log 

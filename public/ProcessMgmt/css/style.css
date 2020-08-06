@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body::after {
+    /* background-image: linear-gradient(rgb(0, 183, 255), rgb(195, 248, 255)); */
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: cover;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+}
+
+
+
+header {
+    background: white;
+    border-bottom: 5px solid #ddd;
+    margin-bottom: 150px;
+    padding: 10px 0;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    margin: 0 auto;
+    max-width: 200px;
+    text-align: center;
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+    color: #fff;
+    font-weight: 700;
+}
+
+h3 {
+    text-align: center;
+    font-size: 70px;
+    color: #ffffff;
+    text-shadow: 3px 2px #6e6e6e;
+    font-weight: 700;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+}
+
+table thead tr th {
+    padding: 15px 10px;
+    border-bottom: 5px solid #d3d2d2 !important;
+    background: #f8f8f8;
+    color: #223;
+}
+
+table tbody tr.running {
+    background: rgba(0, 138, 0, 0.575);
+}
+
+table tbody tr.notRunning {
+    background: rgba(255, 0, 8, 0.6);
+}
+
+table tbody tr td.action-row {
+    text-align: center;
+}
+
+table tbody tr:hover {
+    transition: transform .4s;
+}
+
+table tbody tr:hover {
+    box-shadow: 0px 13px 10px rgba(0, 0, 0, 0.8);
+    background: #fff;
+    color: #333;
+}
+
+table tbody tr td.action-row a i {
+    margin: 0 5px;
+    font-size: 24px;
+    color: #fff;
+}
+
+table tbody tr td.action-row a:hover i {
+    color: #333;
+}
+
+table tbody tr:hover td.action-row a i {
+    color: #000;
+}
+
+
+/* Zebra striping */
+
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+
+td,
+th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+td,
+th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+@media (max-width:767px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+
+.alert-danger{
+    border-radius: .35rem;
+    background-color: rgb(221, 86, 86);
+    border: 3px solid #0000 !important;
+    margin-bottom: 1rem !important;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+  }

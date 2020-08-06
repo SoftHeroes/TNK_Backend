@@ -1,0 +1,124 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API's Documentation",
+        "description": "This is a sample API Documentation",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/registerAdmin": {
+            "post": {
+                "description": "Admin registration API",
+                "operationId": "App\\Http\\Controllers\\API\\AuthController::registerAdmin",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "username": {
+                                        "type": "string"
+                                    },
+                                    "emailID": {
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    },
+                                    "password_confirmation": {
+                                        "type": "string"
+                                    },
+                                    "portalProviderUUID": {
+                                        "type": "string"
+                                    },
+                                    "firstName": {
+                                        "type": "string"
+                                    },
+                                    "middleName": {
+                                        "type": "string"
+                                    },
+                                    "lastName": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "username": "man",
+                                    "emailID": "mani@gmail.com",
+                                    "password": "test",
+                                    "password_confirmation": "test",
+                                    "portalProviderUUID": "78ecbfee-3284-11ea-9d69-e0d55ecac457",
+                                    "firstName": "ManiKanDan",
+                                    "middleName": "",
+                                    "lastName": "G"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "description": "The HTTPS response code",
+                                            "type": "integer"
+                                        },
+                                        "message": {
+                                            "description": "The response message",
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "description": "The response message",
+                                            "type": "boolean"
+                                        },
+                                        "dataGroupExample": {
+                                            "description": "The response message",
+                                            "properties": {
+                                                "inner abc": {
+                                                    "type": "number",
+                                                    "default": 1,
+                                                    "example": 123
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "dataArrayExample": {
+                                            "description": "The response data",
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "adminPolicyID": {
+                                                        "description": "adminPolicy PID",
+                                                        "type": "string"
+                                                    },
+                                                    "portalProviderID": {
+                                                        "description": "portalProviderID PID",
+                                                        "type": "string"
+                                                    },
+                                                    "firstName": {
+                                                        "description": "firstName",
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        }
+    }
+}
